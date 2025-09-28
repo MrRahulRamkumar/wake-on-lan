@@ -36,6 +36,7 @@ const server = serve({
       },
     },
   },
+  port: 2000,
 });
 
 console.log(`Listening on ${server.url}`);
