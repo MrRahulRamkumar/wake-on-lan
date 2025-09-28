@@ -1,6 +1,10 @@
 import { wake } from "./util/wake-on-lan.js";
 import { serve } from "bun";
 
+if (!Bun.env.MAC_ADDRESS) {
+  throw new Error("MAC_ADDRESS is not set");
+}
+
 const server = serve({
   routes: {
     // ** API endpoints ** (Bun v1.2.3+ required)
@@ -32,11 +36,6 @@ const server = serve({
       },
     },
   },
-
-  // Enable development mode for:
-  // - Detailed error messages
-  // - Hot reloading (Bun v1.2.3+ required)
-  development: true,
 });
 
 console.log(`Listening on ${server.url}`);
