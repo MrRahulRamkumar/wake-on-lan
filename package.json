@@ -1,0 +1,20 @@
+{
+  "name": "wake-on-lan",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "bun run src/index.js"
+  },
+  "author": "Rahul Ramkumar",
+  "license": "MIT",
+  "description": "",
+  "private": true,
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  }
+}
